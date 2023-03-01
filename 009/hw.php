@@ -35,3 +35,22 @@ echo '<br>';
 $result = $rand1 + $rand2 + $rand3 - max($rand1, $rand2, $rand3) - min($rand1, $rand2, $rand3);
 
 echo "<h3>$result</h3>";
+
+echo '<br>';
+
+$a = rand(1, 10);
+$b = rand(1, 10);
+$c = rand(1, 10);
+
+echo "$a, $b, $c";
+
+$trikampis = $a + $b <= $c || $b + $c <= $a || $c + $a <= $b ? 'trikampi sudaryti neimanoma' : 'trikampi sudaryti galima';
+
+echo '<br>';
+
+echo $trikampis;
+
+
+// if ($a + $b <= $c) {
+//     echo "'a' $a 'b' $b 'c' $c '>>> trikampi sudaryti neimanoma'";
+// } elseif 

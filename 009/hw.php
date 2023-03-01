@@ -23,3 +23,15 @@ if ($pirmasKintamasis >= $antrasKintamasis && $antrasKintamasis != 0) {
 }
 
 echo '<br>';
+
+$rand1 = rand(0, 25);
+$rand2 = rand(0, 25);
+$rand3 = rand(0, 25);
+
+echo "$rand1, $rand2, $rand3";
+
+echo '<br>';
+
+$result = $rand1 + $rand2 + $rand3 - max($rand1, $rand2, $rand3) - min($rand1, $rand2, $rand3);
+
+echo "<h3>$result</h3>";

@@ -50,7 +50,51 @@ echo '<br>';
 
 echo $trikampis;
 
+echo '<br>';
 
-// if ($a + $b <= $c) {
-//     echo "'a' $a 'b' $b 'c' $c '>>> trikampi sudaryti neimanoma'";
-// } elseif 
+$kintamasis1 = rand(0, 2);
+$kintamasis2 = rand(0, 2);
+$kintamasis3 = rand(0, 2);
+$kintamasis4 = rand(0, 2);
+
+echo "$kintamasis1, $kintamasis2, $kintamasis3, $kintamasis4";
+
+
+
+echo '<br>';
+
+$randomH3 = rand(1, 6);
+
+echo "<h3>$randomH3</h3>";
+
+
+$kintam1 = rand(-10, 10);
+$kintam2 = rand(-10, 10);
+$kintam3 = rand(-10, 10);
+
+// if ($kintam1 < 0) {
+//     echo '<h4 style="color:green">' . $kintam1 . '</h4>';
+// } elseif ($kintam1 = 0) {
+//     echo '<h4 style="color:crimson">' . $kintam1 . '</h4>';
+// } elseif ($kintam1 > 0) {
+//     echo '<h4 style="color:blue">' . $kintam1 . '</h4>';
+// } else {
+//     echo '---';
+// }
+
+// if ($kintam2 < 0) {
+//     echo '<h4 style="color:green">' . $kintam2 . '</h4>';
+// } elseif ($kintam2 = 0) {
+//     echo '<h4 style="color:crimson">' . $kintam2 . '</h4>';
+// } else {
+//     echo '<h4 style="color:blue">' . $kintam2 . '</h4>';
+// }
+
+// if ($kintam3 < 0) {
+//     echo '<h4 style="color:green">' . $kintam3 . '</h4>';
+// } elseif ($kintam3 = 0) {
+//     echo '<h4 style="color:crimson">' . $kintam3 . '</h4>';
+// } else {
+//     echo '<h4 style="color:blue">' . $kintam3 . '</h4>';
+// }
+

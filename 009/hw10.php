@@ -10,10 +10,13 @@ echo 'Pradinis laikrodis: ' . $val . ' : ' . $min . ' : ' . $sek . '<br>';
 
 $pS = rand(0, 300);                     //papildomos sekundes
 
-echo $pS . '<br>';
+echo 'Pridedamos sekundes: ' . $pS . '<br>';
 
 $papM = (round(($pS / 60), 0));          //gaunasi papildomu minuciu pridejimui prie laikrodzio
 $papS = ($pS - $papM * 60);              //gaunasi papildomu sekundziu pridejimui prie laikrodzio
+
+echo 'Papildoma minutemis: ' . $papM . '<br>';
+echo 'Papildoma sekundemis: ' . $papS . '<br>';
 
 $tikrosVal = $val;
 $tikrosMin = $min;

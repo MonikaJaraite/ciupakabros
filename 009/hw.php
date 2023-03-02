@@ -57,7 +57,7 @@ $kintamasis2 = rand(0, 2);
 $kintamasis3 = rand(0, 2);
 $kintamasis4 = rand(0, 2);
 
-echo "$kintamasis1, $kintamasis2, $kintamasis3, $kintamasis4";
+echo "$kintamasis1, $kintamasis2, $kintamasis3, $kintamasis4"; // sita reikia pabaigti
 
 
 
@@ -67,10 +67,7 @@ $randomH3 = rand(1, 6);
 
 echo "<h3>$randomH3</h3>";
 
-
-$kintam1 = rand(-10, 10);
-$kintam2 = rand(-10, 10);
-$kintam3 = rand(-10, 10);
+// $ats = $k1 < 0 ? '<h4 style="color:green">' : $k1 = 0 ? '<h4 style="color:crimson">' : $k1 > 0 ? '<h4 style="color:blue">'
 
 // if ($kintam1 < 0) {
 //     echo '<h4 style="color:green">' . $kintam1 . '</h4>';
@@ -98,3 +95,35 @@ $kintam3 = rand(-10, 10);
 //     echo '<h4 style="color:blue">' . $kintam3 . '</h4>';
 // }
 
+$k1 = rand(-10, 10);
+$k2 = rand(-10, 10);
+$k3 = rand(-10, 10);
+
+echo "$k1, $k2, $k3"; // sitas vieno skaiciaus nespausdina
+
+if ($k1 < 0) {
+    echo '<h4 style="color:green">' . $k1 . '</h4>';
+} elseif ($k1 > 0) {
+    echo '<h4 style="color:blue">' . $k1 . '</h4>';
+} elseif ($k1 = 0) {
+    echo '<h4 style="color:red">' . $k1 . '</h4>';
+} 
+
+echo '<br>';
+
+$zvakes = rand(5, 3000);
+$kaina = 1;
+$kaina3proc = 0.97;
+$kaina4proc = 0.96;
+
+echo "$zvakes, $kaina, $kaina3proc, $kaina4proc";
+
+echo '<br>';
+
+if ($zvakes >= 2000) {
+    echo 'zvakiu kiekis ' . $zvakes . ', mokama suma ' . $zvakes * $kaina4proc;
+} elseif ($zvakes >= 1000) {
+    echo 'zvakiu kiekis ' . $zvakes . ', mokama suma ' . $zvakes * $kaina3proc;
+} else {
+    echo 'zvakiu kiekis ' . $zvakes . ', mokama suma ' . $zvakes * $kaina;
+}

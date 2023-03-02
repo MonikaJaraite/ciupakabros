@@ -8,32 +8,26 @@ $sek = rand(0, 59);
 
 echo 'Pradinis laikrodis: ' . $val . ' : ' . $min . ' : ' . $sek . '<br>';
 
-$pS = rand(0, 300);                     //papildomos sekundes
+$pS = rand(0, 300);           //papildomos sekundes
 
 echo 'Pridedamos sekundes: ' . $pS . '<br>';
 
-$papM = (round(($pS / 60), 0));          //gaunasi papildomu minuciu pridejimui prie laikrodzio
-$papS = ($pS - $papM * 60);              //gaunasi papildomu sekundziu pridejimui prie laikrodzio
+$papM = floor($pS / 60);      //gaunasi papildomu minuciu pridejimui prie laikrodzio
+$papS = $pS % 60;             //gaunasi papildomu sekundziu pridejimui prie laikrodzio
 
 echo 'Papildoma minutemis: ' . $papM . '<br>';
 echo 'Papildoma sekundemis: ' . $papS . '<br>';
 
-$tikrosVal = $val;
-$tikrosMin = $min;
-$tikrosSek = $sek;
+$min += $papM;
+$sek += $papS;
 
-if ($sek + $papS <= 59) {
-    $tikrosSek = ($sek += $papS);
-} elseif ($sek + $papS >= 60) {
-    $tikrosSek = ($sek + $papS - 60);
-    $tikrosMin = ++$min;
+if($sek > 59) {
+    $sek -= 60;
+    ++$min;
+}
+if($min > 59) {
+    $min -= 60;
+    ++$val;
 }
 
-if ($min + $papM <= 59) {
-    $tikrosMin = ($min += $papM);
-} elseif ($min + $papM >= 60) {
-    $tikrosMin = ($min + $papM - 60);
-    $tikrosVal = ++$val;
-}
-
-echo 'Laikrodis, pridejus papildomas sekundes: ' . $tikrosVal . ' : ' . $tikrosMin . ' : ' . $tikrosSek;
+echo 'Laikrodis, pridejus papildomas sekundes: ' . $val . ' : ' . $min . ' : ' . $sek;

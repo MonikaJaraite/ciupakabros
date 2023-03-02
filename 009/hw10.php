@@ -19,15 +19,15 @@ $tikrosVal = $val;
 $tikrosMin = $min;
 $tikrosSek = $sek;
 
-if ($sek + $papS >= 59) {
-    $sek += $papS;
+if ($sek + $papS <= 59) {
+    $tikrosSek = ($sek += $papS);
 } elseif ($sek + $papS >= 60) {
     $tikrosSek = ($sek + $papS - 60);
     $tikrosMin = ++$min;
 }
 
-if ($min + $papM >= 59) {
-    $min += $papM;
+if ($min + $papM <= 59) {
+    $tikrosMin = ($min += $papM);
 } elseif ($min + $papM >= 60) {
     $tikrosMin = ($min + $papM - 60);
     $tikrosVal = ++$val;

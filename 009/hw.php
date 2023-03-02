@@ -69,45 +69,37 @@ echo "<h3>$randomH3</h3>";
 
 // $ats = $k1 < 0 ? '<h4 style="color:green">' : $k1 = 0 ? '<h4 style="color:crimson">' : $k1 > 0 ? '<h4 style="color:blue">'
 
-// if ($kintam1 < 0) {
-//     echo '<h4 style="color:green">' . $kintam1 . '</h4>';
-// } elseif ($kintam1 = 0) {
-//     echo '<h4 style="color:crimson">' . $kintam1 . '</h4>';
-// } elseif ($kintam1 > 0) {
-//     echo '<h4 style="color:blue">' . $kintam1 . '</h4>';
-// } else {
-//     echo '---';
-// }
+$kintam1 = rand(-10, 10);
+$kintam2 = rand(-10, 10);
+$kintam3 = rand(-10, 10);
 
-// if ($kintam2 < 0) {
-//     echo '<h4 style="color:green">' . $kintam2 . '</h4>';
-// } elseif ($kintam2 = 0) {
-//     echo '<h4 style="color:crimson">' . $kintam2 . '</h4>';
-// } else {
-//     echo '<h4 style="color:blue">' . $kintam2 . '</h4>';
-// }
+echo "$kintam1, $kintam2, $kintam3";
 
-// if ($kintam3 < 0) {
-//     echo '<h4 style="color:green">' . $kintam3 . '</h4>';
-// } elseif ($kintam3 = 0) {
-//     echo '<h4 style="color:crimson">' . $kintam3 . '</h4>';
-// } else {
-//     echo '<h4 style="color:blue">' . $kintam3 . '</h4>';
-// }
+if ($kintam1 < 0) {
+    echo '<h4 style="color:green">' . $kintam1 . '</h4>';
+} elseif ($kintam1 == 0) {
+    echo '<h4 style="color:crimson">' . $kintam1 . '</h4>';
+} elseif ($kintam1 > 0) {
+    echo '<h4 style="color:blue">' . $kintam1 . '</h4>';
+} else {
+    echo '---';
+}
 
-$k1 = rand(-10, 10);
-$k2 = rand(-10, 10);
-$k3 = rand(-10, 10);
+if ($kintam2 < 0) {
+    echo '<h4 style="color:green">' . $kintam2 . '</h4>';
+} elseif ($kintam2 == 0) {
+    echo '<h4 style="color:crimson">' . $kintam2 . '</h4>';
+} else {
+    echo '<h4 style="color:blue">' . $kintam2 . '</h4>';
+}
 
-echo "$k1, $k2, $k3"; // sitas vieno skaiciaus nespausdina
-
-if ($k1 < 0) {
-    echo '<h4 style="color:green">' . $k1 . '</h4>';
-} elseif ($k1 > 0) {
-    echo '<h4 style="color:blue">' . $k1 . '</h4>';
-} elseif ($k1 = 0) {
-    echo '<h4 style="color:red">' . $k1 . '</h4>';
-} 
+if ($kintam3 < 0) {
+    echo '<h4 style="color:green">' . $kintam3 . '</h4>';
+} elseif ($kintam3 == 0) {
+    echo '<h4 style="color:crimson">' . $kintam3 . '</h4>';
+} else {
+    echo '<h4 style="color:blue">' . $kintam3 . '</h4>';
+}
 
 echo '<br>';
 

@@ -13,4 +13,4 @@ echo '<br>';
 
 var_dump($eng);
 
-for (i = 0, i < )
+// Sprendimas yra folderyje 011/hwExplain.php

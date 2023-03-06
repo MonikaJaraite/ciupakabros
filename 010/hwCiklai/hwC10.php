@@ -13,14 +13,8 @@ while ($ikalimas < 85) {
     $ikalimas += $mazasSmugis;
     echo 'Ikalta: ' . $ikalimas . '<br>';
     $smugiuSkaicius++;
-    if ($ikalimas + $mazasSmugis >= 85) {
-        break;
-    } 
 } 
-
-if ($ikalimas < 85) {
-        $smugiuSkaicius++;
-    } echo 'Mazu smugiu skaicius: ' . $smugiuSkaicius . '<br>';
+echo 'Mazu smugiu skaicius: ' . $smugiuSkaicius . '<br>';
 
 echo '<br>';
 
@@ -30,21 +24,17 @@ $smugiuSkaicius2 = 0;
 while ($ikalimas2 < 85) {
     $tikimybe = rand(0, 1);
     if ($tikimybe == 0) {
-        echo 'Tikimybe: ' . $tikimybe . '<br>';
+        echo 'Tikimybe: ' . $tikimybe . ', ';
         $smugiuSkaicius2++;
+        echo 'Smugiu skaicius: ' . $smugiuSkaicius2 . '<br>';
         continue;
     } if ($tikimybe == 1) {
         $didelisSmugis = rand(20, 30);
         echo 'Didelis smugis: ' . $didelisSmugis . ', ';
         $ikalimas2 += $didelisSmugis;
-        echo 'Ikalta: ' . $ikalimas2 . '<br>';
         $smugiuSkaicius2++;
-        if ($ikalimas2 + $didelisSmugis >= 85) {
-            break;
-        } 
+        echo 'Smugiu skaicius: ' . $smugiuSkaicius2 . ', ';
+        echo 'Ikalta: ' . $ikalimas2 . '<br>';
     }
-}
-
-if ($ikalimas < 85) {
-    $smugiuSkaicius2++;
-} echo 'Dideliu smugiu skaicius: ' . $smugiuSkaicius2;
+} 
+echo 'Dideliu smugiu skaicius: ' . $smugiuSkaicius2;

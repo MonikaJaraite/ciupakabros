@@ -26,15 +26,14 @@ echo '<br>';
 
 $b = '';
 
-do {
+while ($b < 3) {
     $a = rand(0, 1);
     if ($a != 0) {
         echo '<br>' . 'S' . '<br>';
     } else {
         echo '<br>' . 'H' . '<br>';
     }
-    if ($a != 1); {
-        $b++;
-    }    
-} while ($b != 3);
+}
+
+echo '<h3 style="color:blue">' . $b . '</h3>';
 

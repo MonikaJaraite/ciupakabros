@@ -15,9 +15,9 @@
 do {
     $a = rand(0, 1);
     echo '<span style="color:crimson;">' . $a . ' ' . '</span>';
-    if ($a != 0) {
+    if ($a == 1) {
         echo '<br>' . 'S' . '<br>';
-    } else {
+    } elseif ($a == 0) {
         echo '<br>' . 'H' . '<br>';
     }
 } while ($a != 0);
@@ -28,12 +28,12 @@ $b = '';
 
 while ($b < 3) {
     $a = rand(0, 1);
-    if ($a != 0) {
+    if ($a == 1) {
         echo '<br>' . 'S' . '<br>';
-    } else {
+    } elseif ($a == 0) {
         echo '<br>' . 'H' . '<br>';
+        $b++;
     }
 }
 
 echo '<h3 style="color:blue">' . $b . '</h3>';
-

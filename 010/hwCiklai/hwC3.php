@@ -11,4 +11,3 @@ for ($a = 1; $a <= $b; ++$a) {
 }
 
 // Kaip nuimti kableli po paskutinio skaiciaus?
-// Eilute wraps itself, bet ar yra koks nors papildomas css variantas? wordwrap?

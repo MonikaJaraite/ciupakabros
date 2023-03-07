@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="1; url=http://localhost/ciupakabros/011/kv.php">
     <title>Kvadratas</title>
+    <!-- Nupieškite kvadratą iš “*”, kurio kraštines sudaro 100 “*”. Panaudokite css stilių, kad kvadratas ekrane atrodytų kvadratinis.
+        * * * * * * * * * * *
+        * * * * * * * * * * *
+        * * * * * * * * * * *
+        * * * * * * * * * * *
+        * * * * * * * * * * *
+        * * * * * * * * * * *
+        * * * * * * * * * * *
+    Prieš tai nupieštam kvadratui nupieškite raudonas istrižaines. -->
+
     <style>
         span {
             line-height: 1;

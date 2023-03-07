@@ -18,7 +18,7 @@ while ($p < 222 && $k < 222) {
     } elseif ($Petras == $Kazys) {
         echo 'Petras: ' . $Petras . ', ' . 'Kazys: ' . $Kazys . '. ' . 'Lygiosios' . '<br>';
     }
-}                   // while ($p >= 222 || $k >= 222);
+}
 
 if ($p >= 222 && $k < 222) {
     echo 'Petras: ' . $p . ', ' . 'Kazys: ' . $k . '. ' . 'Žaidimą laimėjo: Petras' . '<br>';

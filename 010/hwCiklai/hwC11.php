@@ -8,3 +8,5 @@ for ($x = 1; $x <= 50; ++$x) {
     $rand = rand(1, 200);
     
 }
+
+// nebaigtas

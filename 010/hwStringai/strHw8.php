@@ -10,5 +10,4 @@ echo $a . '<br>';
 
 echo '<h1>' . substr($a, -14, 1) . '</h1>';
 
-// kitas budas - naudoti regex - gudrios operacijos su stringais:
-
+// kitas budas - naudoti regex - gudrios operacijos su stringais

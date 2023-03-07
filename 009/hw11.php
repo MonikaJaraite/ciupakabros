@@ -13,3 +13,5 @@ $f = rand(1000, 9999);
 echo '6 kintamieji: ' . "$a, $b, $c, $d, $e, $f" . '<br>';
 
 echo max($a, $b, $c, $d, $e, $f);
+
+// nebaigtas

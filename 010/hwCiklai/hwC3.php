@@ -4,10 +4,26 @@
 
 $b = rand(3000, 4000);
 
-for ($a = 1; $a <= $b; ++$a) {
-    if (($a % 77 == 0)) {
-        echo $a . ', ';
-    }
+// for ($a = 1; $a <= $b; ++$a) {
+//     if (($a % 77 == 0)) {
+//         echo $a . ', ';
+//     }
+// }
+
+for ($a = 77; $a <= $b; $a+=77) {
+    if ($a !=77) {
+        echo ', ' . $a;
+    } else echo $a;
 }
 
-// Kaip nuimti kableli po paskutinio skaiciaus?
+echo '<br>';
+
+$str = '';
+
+for ($a = 1; $a <= $b; ++$a) {
+    if (($a % 77 == 0)) {
+        $str .= $a . ', ';
+    }
+} 
+
+echo substr($str, 0, -2);

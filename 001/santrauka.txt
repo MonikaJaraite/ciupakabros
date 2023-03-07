@@ -1,0 +1,10 @@
+echo ("&nbsp;*");       // &nbs = the non-breaking space
+str_repeat
+echo $$$vienas;
+echo '<pre>';
+// !=  <=> ==
+// >   <=> <=
+// <   <=> >=
+// ||  <=> &&
+echo '<h3 style="color:skyblue; margin: 5px;">' . $x . '</h3>';
+

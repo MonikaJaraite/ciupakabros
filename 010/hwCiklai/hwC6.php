@@ -17,23 +17,36 @@ do {
     echo '<span style="color:crimson;">' . $a . ' ' . '</span>';
     if ($a == 1) {
         echo '<br>' . 'S' . '<br>';
-    } elseif ($a == 0) {
+    } else {
         echo '<br>' . 'H' . '<br>';
     }
 } while ($a != 0);
 
 echo '<br>';
 
-$b = '';
+$b = 0;
 
 while ($b < 3) {
     $a = rand(0, 1);
     if ($a == 1) {
         echo '<br>' . 'S' . '<br>';
-    } elseif ($a == 0) {
+    } else {
         echo '<br>' . 'H' . '<br>';
         $b++;
     }
 }
 
 echo '<h3 style="color:blue">' . $b . '</h3>';
+
+$b = 0;
+
+while ($b < 3) {
+    $a = rand(0, 1);
+    if ($a == 1) {
+        echo 'S';
+        $b = 0;
+    } else {
+        echo 'H';
+        $b++;
+    }
+}

@@ -54,6 +54,7 @@ $new = [];
 foreach ($arr as $key => $value) {
     $new[] = $value - $key;
 }
+echo 'Naujas masyvas: ';
 print_r($new);
 
 // e) Papildykite masyvą papildomais 10 elementų su reikšmėmis nuo 5 iki 25, kad bendras masyvas padidėtų iki indekso 39;
@@ -62,7 +63,7 @@ for ($i=0; $i <=9; ++$i) {
     $rand = rand(5, 25);
     array_push($arr, $rand);
 }
-
+echo 'Papildytas masyvas: ';
 print_r($arr);
 
 // f) Iš masyvo elementų sukurkite du naujus masyvus. Vienas turi būti sudarytas iš neporinių indekso reikšmių, o kitas iš porinių;
@@ -77,6 +78,27 @@ foreach ($arr as $key => $value) {
         array_push($b, $value);
     }
 }
-
+echo 'Du masyvai - vienas is neporiniu ankstesnio masyvo reiksmiu, kitas is poriniu: ';
 print_r($a);
 print_r($b);
+
+// g) Pirminio masyvo elementus su poriniais indeksais padarykite lygius 0 jeigu jie didesni už 15;
+
+foreach ($arr as $key => $value) {
+    if ($key %2 == 0) {
+        print_r($key); {
+            if ($value > 15) {
+                $value === 0;
+            }
+        }
+        
+    } else {
+        $value;
+    }
+}
+echo 'Masyvas su poriniais indeksais lygiais nuliui: ';
+print_r($arr);
+
+// h) Suraskite pirmą (mažiausią) indeksą, kurio elemento reikšmė didesnė už 10;
+
+echo 'Pirmas (maziausias)indeksas, kurio elemento reiksme didesne uz 10: ' . implode(',', array_search(($value > 10), $arr));

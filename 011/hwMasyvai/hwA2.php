@@ -84,21 +84,22 @@ print_r($b);
 
 // g) Pirminio masyvo elementus su poriniais indeksais padarykite lygius 0 jeigu jie didesni už 15;
 
-foreach ($arr as $key => $value) {
-    if ($key %2 == 0) {
-        print_r($key); {
-            if ($value > 15) {
-                $value === 0;
-            }
-        }
-        
-    } else {
-        $value;
+foreach ($arr as $key => &$value) {
+    if ($key %2 == 0 && $value > 15) {
+       $value = 0;
     }
 }
+
 echo 'Masyvas su poriniais indeksais lygiais nuliui: ';
 print_r($arr);
 
 // h) Suraskite pirmą (mažiausią) indeksą, kurio elemento reikšmė didesnė už 10;
 
-echo 'Pirmas (maziausias)indeksas, kurio elemento reiksme didesne uz 10: ' . implode(',', array_search(($value > 10), $arr));
+// echo 'Pirmas (maziausias)indeksas, kurio elemento reiksme didesne uz 10: ' . implode(',', array_search(($value > 10), $arr));
+
+foreach ($arr as $key => $value) {
+    if ($value > 10) {
+        echo 'Pirmas (maziausias)indeksas, kurio elemento reiksme didesne uz 10: ' . $key . '<br>';
+        break;
+    } 
+} 

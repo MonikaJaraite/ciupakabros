@@ -11,3 +11,5 @@ echo '<h1 style="overflow-wrap: break-word">' . $b . '</h1>' . '<br>';
 $c = wordwrap($b, 50, "<br>\n", TRUE);
 
 echo $c;
+
+// str_repeat = po kapotu tas pats for'as

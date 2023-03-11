@@ -14,11 +14,18 @@ foreach(range(1, 10) as $value) {
     $arr[] = $temp;
 }
 
+echo 'Masyvas su atsitiktiniu skaiciumi raidziu submasyvuose:  <br>';
 print_r($arr);
 
 // Išrūšiuokite antro lygio masyvus pagal abėcėlę (t.y. tuos kur su raidėm).
 
+foreach($arr as &$value) {
+    sort($value);
+}
 
+echo 'Antro lygio masyvai isrusiuoti pagal abecele: <br>';
+print_r($arr);
+unset($value);
 
 // 4. Išrūšiuokite trečio uždavinio pirmo lygio masyvą taip, kad elementai kurių masyvai trumpiausi eitų pradžioje. Masyvai kurie turi bent vieną “K” raidę, visada būtų didžiojo masyvo visai pradžioje.
 

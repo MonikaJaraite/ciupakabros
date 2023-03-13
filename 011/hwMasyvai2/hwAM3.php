@@ -42,6 +42,10 @@ foreach($arr as $value) {
     }
 }
 
+while ($arr < (10 - count($arrK))) {
+    
+}
+
 $lengths = [];
 
 foreach($arrWithoutK as $key => $value) {

@@ -7,22 +7,22 @@ class Stikine {
     private $turis;
     private $kiekis;
 
-    public function __construct($turis) {
+    public function __construct(int $turis) {
         $this->turis = $turis;
     }
 
-    public function ipilti() {
+    public function ipilti() :void {
         if ($this->turis <= $this->kiekis + $kiekis) {
-           $this->kiekis = $this->turis;
+            $this->kiekis = $this->turis;
         } 
-        else {$this->turis +=$kiekis;
+        else {
+            $this->turis +=$kiekis;
         }
     }
 
-    public function ispilti() {
+    public function ispilti() :int {
         $temp = $this->kiekis;
         $this->kiekis = 0;
         return $temp;
     }
-
 }

@@ -1,0 +1,17 @@
+{
+    "name": "user/clients",
+    "description": "Clients Database",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "User\\Clients\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MonikaJaraite",
+            "email": "monjara@gmail.com"
+        }
+    ],
+    "require": {}
+}

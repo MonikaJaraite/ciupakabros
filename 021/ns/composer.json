@@ -1,0 +1,17 @@
+{
+    "name": "user/ns",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "": "uztvankos/",
+            "Ievos\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "MonikaJaraite",
+            "email": "monjara@gmail.com"
+        }
+    ],
+    "require": {}
+}

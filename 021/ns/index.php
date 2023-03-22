@@ -1,10 +1,9 @@
+
 <?php
 use Ievos\Pievos\Read;
 use Petro\Read as PR;
 
-require __DIR__ . '/bebras/Go.php';
-require __DIR__ . '/ieva/Read.php';
-require __DIR__ . '/petras/Read.php';
+require __DIR__ . '/vendor/autoload.php';
 
 
 $stock = new Read;

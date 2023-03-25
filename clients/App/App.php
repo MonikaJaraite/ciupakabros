@@ -1,6 +1,7 @@
 <?php
 namespace App;
 
+use App\Controllers\HomeController;
 
 class App {
 
@@ -18,10 +19,10 @@ class App {
         $method = $_SERVER['REQUEST_METHOD'];
 
         if ($method == 'GET' && count($url) == 1 && $url[0] === '') {
-            return 'Jo';
+            return (new HomeController)->home();
         }
         else {
-            return 'Ne Jo';
+            return '<h1>404 PAGE NOT FOUND</h1>';
         }
     }
 }

@@ -25,4 +25,16 @@ class App {
             return '<h1>404 PAGE NOT FOUND</h1>';
         }
     }
+
+    public static function views($tmp) 
+    {
+        $path = __DIR__ . '/../views/';
+
+        require $path . 'top.php';
+
+        require $path . $tmp . '.php';
+
+        require $path . 'bottom.php';
+    }
+
 }

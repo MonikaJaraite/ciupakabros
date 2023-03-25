@@ -1,11 +1,12 @@
 <?php
 namespace App\Controllers;
+use App\App;
 
 class HomeController {
 
     public function home()
     {
-        return '<h1>HOME</h1>';
+        return App::views('home/index');
     }
 
 }

@@ -30,11 +30,13 @@ class App {
     {
         $path = __DIR__ . '/../views/';
 
+        ob_start();
         require $path . 'top.php';
-
         require $path . $tmp . '.php';
-
         require $path . 'bottom.php';
+        $html = ob_get_contents();
+        ob_end_clean();
+        return $html;
     }
 
 }

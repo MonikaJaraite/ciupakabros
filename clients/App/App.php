@@ -26,9 +26,10 @@ class App {
         }
     }
 
-    public static function views($tmp) 
+    public static function views($tmp, $data = []) 
     {
         $path = __DIR__ . '/../views/';
+        extract($data);
 
         ob_start();
         require $path . 'top.php';

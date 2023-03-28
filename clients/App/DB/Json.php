@@ -21,7 +21,6 @@ class Json implements DataBase {
         file_put_contents(__DIR__ .'/data.json', json_encode($this->data));
     }
 
-
     function create(array $clientData) : void
     {
         $id = rand(10000000, 99999999);
@@ -35,7 +34,11 @@ class Json implements DataBase {
         $this->data = array_map(fn($d) => $d['id'] == $clientId ? $clientData : $d, $this->data);
     }
 
-    function delete(int $clientId) : void{}
+    function delete(int $clientId) : void
+    {
+        $this->data = array_filter($this->data, fn($d) => $d['id'] != $clientId);
+        $this->data = array_values($this->data);
+    }
 
     function show(int $clientId) : array
     {

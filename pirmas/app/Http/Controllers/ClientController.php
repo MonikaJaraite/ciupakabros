@@ -31,26 +31,34 @@ class ClientController extends Controller
         $client->surname = $request->surname;
         $client->tt = isset($request->tt) ? 1 : 0;
         $client->save();
-        return redirect()->back();
+        return redirect()->route('clients-index');
 
     }
 
 
     public function show(Client $client)
     {
-        //
+        return view('clients.show', [
+            'client' => $client
+        ]);
     }
 
 
     public function edit(Client $client)
     {
-        //
+        return view('clients.edit', [
+            'client' => $client
+        ]);
     }
 
 
     public function update(Request $request, Client $client)
     {
-        //
+        $client->name = $request->name;
+        $client->surname = $request->surname;
+        $client->tt = isset($request->tt) ? 1 : 0;
+        $client->save();
+        return redirect()->route('clients-index');
     }
 
 

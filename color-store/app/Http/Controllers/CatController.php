@@ -8,12 +8,17 @@ class CatController extends Controller
 {
     public function index()
     {
-        //
+        $cats = Cat::all();
+
+        return view('back.cats.index', [
+            'cats' => $cats
+        ]);
     }
 
     public function create()
     {
-        //
+        return view('back.cats.create', [
+        ]);
     }
 
     public function store(StoreCatRequest $request)

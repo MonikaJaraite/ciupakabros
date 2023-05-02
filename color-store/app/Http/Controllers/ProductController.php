@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Cat;
 use Illuminate\Http\Request;
+use App\Services\ColorNamingService;
 
 class ProductController extends Controller
 {
@@ -36,6 +37,15 @@ class ProductController extends Controller
 
         return response()->json([
             'html' => $html,
+            'message' => 'OK',
+        ]);
+    }
+
+
+    public function colorName(Request $request, ColorNamingService $cns) 
+    {
+        return response()->json([
+            'name' => $cns->nameIt($request->color),
             'message' => 'OK',
         ]);
     }

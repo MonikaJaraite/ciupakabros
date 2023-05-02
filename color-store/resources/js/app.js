@@ -21,7 +21,8 @@ if (document.querySelector('.--cat--select')) {
     select.addEventListener('change', _ => {
         axios.get(select.dataset.url + '?cat=' + select.value)
             .then(res => {
-                console.log();
+                document.querySelector('.--colors--selectors').innerHTML = res.data.html
+                console.log(res.data);
             })
     })
 }

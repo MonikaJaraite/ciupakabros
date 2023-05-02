@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class CatController extends Controller
 {
+
     public function index()
     {
         $cats = Cat::all();
@@ -16,11 +17,14 @@ class CatController extends Controller
         ]);
     }
 
+
     public function create()
     {
         return view('back.cats.create', [
+
         ]);
     }
+
 
     public function store(Request $request)
     {
@@ -31,12 +35,14 @@ class CatController extends Controller
         return redirect()->route('cats-index');
     }
 
+
     public function edit(Cat $cat)
     {
         return view('back.cats.edit', [
             'cat' => $cat
         ]);
     }
+
 
     public function update(Request $request, Cat $cat)
     {
@@ -46,6 +52,7 @@ class CatController extends Controller
         ]);
         return redirect()->route('cats-index');
     }
+
 
     public function destroy(Cat $cat)
     {

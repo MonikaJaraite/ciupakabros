@@ -10,13 +10,11 @@
                 </div>
                 <div class="card-body">
                     <form action="{{route('products-store')}}" method="post">
-
                         <div class="container">
                             <div class="row">
                                 <div class="col-8">
-
                                     <div class="mb-3">
-                                        <label class="form-label">Product Title</label>
+                                        <label class="form-label">Product Tile</label>
                                         <input type="text" class="form-control" name="title" value={{old('title')}}>
                                         <div class="form-text">Please add product title here</div>
                                     </div>
@@ -38,6 +36,12 @@
                                     </select>
                                     <div class="form-text">Please select product category here</div>
                                 </div>
+                                 <div class="col-12">
+                                    <div class="colors-selectors --colors--selectors">
+
+                                    </div>
+                                </div>
+
                                 <div class="col-12">
                                     <button type="submit" class="mt-5 btn btn-outline-primary">Submit</button>
                                 </div>

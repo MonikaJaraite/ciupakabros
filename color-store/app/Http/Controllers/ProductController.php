@@ -16,6 +16,7 @@ class ProductController extends Controller
 
     public function create()
     {
+
         $cats = Cat::all();
 
         return view('back.products.create', [
@@ -23,30 +24,46 @@ class ProductController extends Controller
         ]);
     }
 
-    public function colors() 
+    public function colors(Request $request)
     {
-        return 'OK';
+        $html = '<h1>OK</h1>';
+
+        $colorsCount = Cat::where('id', $request->cat)->first()->colors_count;
+
+        $html = view('back.products.colors')
+        ->with(['colorsCount' => $colorsCount])
+        ->render();
+
+        return response()->json([
+            'html' => $html,
+            'message' => 'OK',
+        ]);
     }
+
 
     public function store(Request $request)
     {
         //
     }
 
+
     public function show(Product $product)
     {
         //
     }
+
 
     public function edit(Product $product)
     {
         //
     }
 
+
     public function update(Request $request, Product $product)
     {
         //
     }
+
 
     public function destroy(Product $product)
     {

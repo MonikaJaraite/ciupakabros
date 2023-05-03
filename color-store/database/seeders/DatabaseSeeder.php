@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
+use App\Services\ColorNamingService;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $faker = Faker::create();
+        $cns = new ColorNamingService;
+
         DB::table('users')->insert([
             'name' => 'Ana',
             'email' => 'ana@mail.com',
@@ -30,6 +35,24 @@ class DatabaseSeeder extends Seeder
                 'title' => $title,
                 'colors_count' => $count + 1,
             ]);
+        }
+
+        foreach(range(1, 20) as $_) {
+            $catId = rand(1, 5);
+            $id = DB::table('products')->insertGetId([
+                'title' => $faker->cityPrefix. ' ' .$faker->streetSuffix,
+                'price' => rand(100, 5000) / 100,
+                'cat_id' => $catId
+            ]);
+
+            foreach(range(1, $catId) as $_) {
+                $hex = $faker->hexcolor;
+                DB::table('colors')->insert([
+                    'hex' => $hex,
+                    'title' => $cns->nameIt(substr($hex, 1)),
+                    'product_id' => $id
+                ]);
+            }
         }
     }
 }
